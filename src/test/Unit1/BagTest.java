@@ -1,9 +1,9 @@
 package Unit1;
 
 import org.junit.*;
-
 import Unit1.*;
 import Tools.*;
+
 public class BagTest {
 
 	@Test 

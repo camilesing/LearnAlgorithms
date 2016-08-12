@@ -2,7 +2,6 @@ package Unit1;
 
 import org.junit.*;
 import Tools.*;
-import Unit1.Queue;
 
 public class QueueTest {
 

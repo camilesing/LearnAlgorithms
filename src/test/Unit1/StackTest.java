@@ -1,13 +1,17 @@
 package Unit1;
 
 import org.junit.*;
-import Tools.*;
 import Unit1.Stack;
+import Tools.*;
+//import edu.princeton.cs.algs4.StdIn;
+//import edu.princeton.cs.algs4.StdOut;
 
 public class StackTest {
 
 	@Test
 	public void Test(){
+        
+        
         Stack<String> stack = new Stack<String>();
         while (!StdIn.isEmpty()) {
             String item = StdIn.readString();
