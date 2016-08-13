@@ -92,13 +92,12 @@ public class Stack<Item> implements Iterable<Item> {
         return s.toString();
     }
     
-    //1.3.20——尝试制作：传入数字k，删除链表的第K个元素
+    //1.3.20——尝试制作：传入数字k，删除链表的第K个元素。那么肯定是栈顶开始计算
     public void delete(int k ){
 
-    	if (k-1<=n){
+    	//不允许大于n的值
+    	if (k<=n){
     	Node <Item> nowPoint = first.next;
-    	//拿取上一个元素
-    	k --;
     	for (int i =1;k==i;i++){
     		nowPoint = nowPoint.next;
     	}
