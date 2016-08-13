@@ -110,19 +110,24 @@ public class Stack<Item> implements Iterable<Item> {
     }
     //1.3.21——尝试制作：接受一条链表和一个字符串key作为参数
     //如果链表中的某个节点的item域的值为key，则方法返回true，否则返回false
-    //在这里我们实现的简单一点，就传入本
+    //在这里我们实现的简单一点，就传入this stack
+    //有一个有意思的地方。多调用几次find就会导致多next几次
     public boolean find(String key){
     	//其实也可以用foreach
+    	Node <Item> nowPoint = first;
     	while(true){
-    		if(first.item.equals(key)){
+    		if(nowPoint.item.equals(key)){
+    			StdOut.print("output : true");
     			return true;
     		//链表没有下一个了
     		}else if (first.next.equals(null)){
-    			return false;
-    		}else {
+    			StdOut.print("output : false");
     			return false;
     		}
+        	  nowPoint = nowPoint.next;
+        	  StdOut.println("then next~");
     	}
+
     }
     
     /**

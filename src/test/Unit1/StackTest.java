@@ -12,6 +12,9 @@ public class StackTest {
 		Stack<String> stack = new Stack<String>();
 		while (!StdIn.isEmpty()) {
 			String item = StdIn.readString();
+			if (item.equals("find")) {
+				stack.find("3");
+			}
 			if (item.equals("del")) {
 				stack.delete(3);
 			}
