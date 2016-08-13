@@ -97,12 +97,12 @@ public class Stack<Item> implements Iterable<Item> {
 
     	//不允许大于n的值
     	if (k<=n){
-    	Node <Item> nowPoint = first.next;
+    	Node <Item> nowNode = first.next;
     	for (int i =1;k==i;i++){
-    		nowPoint = nowPoint.next;
+    		nowNode = nowNode.next;
     	}
-    	Node <Item> needLinePoint = nowPoint.next.next;
-    	nowPoint.next = needLinePoint;
+    	Node <Item> needLinePoint = nowNode.next.next;
+    	nowNode.next = needLinePoint;
     	}else{
     		//这里简单的打印一下
     		StdOut.print("!------------------删除元素越界！------------------!");
@@ -111,12 +111,12 @@ public class Stack<Item> implements Iterable<Item> {
     //1.3.21——尝试制作：接受一条链表和一个字符串key作为参数
     //如果链表中的某个节点的item域的值为key，则方法返回true，否则返回false
     //在这里我们实现的简单一点，就传入this stack
-    //有一个有意思的地方。多调用几次find就会导致多next几次
+    //有一个有意思的地方。多调用几次find就会导致多next几次。应该是因为find存进了栈里
     public boolean find(String key){
     	//其实也可以用foreach
-    	Node <Item> nowPoint = first;
+    	Node <Item> nowNode = first;
     	while(true){
-    		if(nowPoint.item.equals(key)){
+    		if(nowNode.item.equals(key)){
     			StdOut.print("output : true");
     			return true;
     		//链表没有下一个了
@@ -124,12 +124,30 @@ public class Stack<Item> implements Iterable<Item> {
     			StdOut.print("output : false");
     			return false;
     		}
-        	  nowPoint = nowPoint.next;
+    		nowNode = nowNode.next;
         	  StdOut.println("then next~");
     	}
 
     }
+    //1.3.24 接受一个链表节点作为参数并删除该节点的后续节点
+    // ————如果参数节点或参数节点的后续节点为为空则什么都不做
+    public void removeAfter(Node<Item>node ){
+    	if(node == null || node.next == null){
+    		//什么也别做
+    	}else{
+            if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        	Node <Item> tempNode = node.next.next;
+            node.next = null;
+            node.next = node.next.next;
+            n--;
+    	}
+    }
     
+    //接受一个链表和一个字符串key作为参数，删除链表中所有item域为key的节点
+    //那么为了降低难度，直接写成对this产生作用的方法
+    public void remove (String key){
+    	//TODO
+    }
     /**
      * Returns an iterator to this stack that iterates through the items in LIFO order.
      *
