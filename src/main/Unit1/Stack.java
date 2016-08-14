@@ -104,7 +104,7 @@ public class Stack<Item> implements Iterable<Item> {
 		if (k <= n) {
 			Node<Item> nowNextNode = first;
 			// 要第几个就next到第几个的上一个
-			for (int i = 1; (k-1) != i; i++) {
+			for (int i = 1; (k - 1) != i; i++) {
 				nowNextNode = nowNextNode.next;
 			}
 			// 删除节点
@@ -119,7 +119,6 @@ public class Stack<Item> implements Iterable<Item> {
 	// 1.3.21——尝试制作：接受一条链表和一个字符串key作为参数
 	// 如果链表中的某个节点的item域的值为key，则方法返回true，否则返回false
 	// 在这里我们实现的简单一点，就传入this stack
-	// 有一个有意思的地方。多调用几次find就会导致多next几次。应该是因为find存进了栈里
 	public boolean find(String key) {
 		// 其实也可以用foreach
 		Node<Item> nowNode = first;
@@ -156,8 +155,45 @@ public class Stack<Item> implements Iterable<Item> {
 	// 接受一个链表和一个字符串key作为参数，删除链表中所有item域为key的节点
 	// 那么为了降低难度，直接写成对this产生作用的方法
 	public void remove(String key) {
-		// TODO
+		// 首先肯定是一个能够不停next直到没有的循环
+		// 然后就是对等于key和不等于key的逻辑判断
+		// 先判断nowNode== null，如果是，说明已经到了尾部，结束循环。同样nowNode.next == null也是
+		Node<Item> nowNode = first;
+		while (true) {
+			if (nowNode == null ) {
+				StdOut.println("搜索结束");
+				break;
+			} 
+			if (nowNode.item.equals(key)) {
+				StdOut.println("已搜索到该字符串！");
+				if (nowNode.next == null){
+					StdOut.println("已到达底端，退出！");
+					break;
+				}
+				//删除节点操作
+				//临时存储的对象：直接让nextNode和nowNode交换
+				Node<Item> nextNode ;
+				nextNode = nowNode.next;
+				nowNode.item = nextNode.item;
+				nowNode.next = nextNode.next;
+				nextNode = null;
+			}
+			else {
+				nowNode = nowNode.next;
+			}
+		}
+	}
 
+	// 1.3.27编写一个方法max，接受一条链表的首节点作为参数，返回链表中最大的节点的值
+	public int max(Node<Item> first) {
+		int max = 0;
+		while (true) {
+			if (first.next == null) {
+				return max;
+			} else if ((int) first.item > max) {
+				max = (int) first.item;
+			}
+		}
 	}
 
 	/**

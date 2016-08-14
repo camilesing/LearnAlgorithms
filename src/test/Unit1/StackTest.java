@@ -25,7 +25,7 @@ public class StackTest {
 				stack.push(item);
 			} 
 			else if (!stack.isEmpty()) {
-				StdOut.print(stack.pop() + " ");
+				StdOut.println(stack.pop() + " ");
 			}
 
 		}
