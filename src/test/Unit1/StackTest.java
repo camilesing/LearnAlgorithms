@@ -15,15 +15,16 @@ public class StackTest {
 			if (item.equals("find")) {
 				stack.find("3");
 			}
-			if (item.equals("remove")) {
+			else if (item.equals("remove")) {
 				stack.remove("1");
 			}
-			if (item.equals("del")) {
+			else if (item.equals("del")) {
 				stack.delete(3);
 			}
-			if (!item.equals("-")) {
+			else if (!item.equals("-")) {
 				stack.push(item);
-			} else if (!stack.isEmpty()) {
+			} 
+			else if (!stack.isEmpty()) {
 				StdOut.print(stack.pop() + " ");
 			}
 
