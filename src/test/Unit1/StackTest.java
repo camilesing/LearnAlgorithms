@@ -14,17 +14,13 @@ public class StackTest {
 			String item = StdIn.readString();
 			if (item.equals("find")) {
 				stack.find("3");
-			}
-			else if (item.equals("remove")) {
+			} else if (item.equals("remove")) {
 				stack.remove("1");
-			}
-			else if (item.equals("del")) {
+			} else if (item.equals("del")) {
 				stack.delete(3);
-			}
-			else if (!item.equals("-")) {
+			} else if (!item.equals("-")) {
 				stack.push(item);
-			} 
-			else if (!stack.isEmpty()) {
+			} else if (!stack.isEmpty()) {
 				StdOut.println(stack.pop() + " ");
 			}
 

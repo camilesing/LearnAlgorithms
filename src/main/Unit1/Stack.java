@@ -160,25 +160,24 @@ public class Stack<Item> implements Iterable<Item> {
 		// 先判断nowNode== null，如果是，说明已经到了尾部，结束循环。同样nowNode.next == null也是
 		Node<Item> nowNode = first;
 		while (true) {
-			if (nowNode == null ) {
+			if (nowNode == null) {
 				StdOut.println("搜索结束");
 				break;
-			} 
+			}
 			if (nowNode.item.equals(key)) {
 				StdOut.println("已搜索到该字符串！");
-				if (nowNode.next == null){
+				if (nowNode.next == null) {
 					StdOut.println("已到达底端，退出！");
 					break;
 				}
-				//删除节点操作
-				//临时存储的对象：直接让nextNode和nowNode交换
-				Node<Item> nextNode ;
+				// 删除节点操作
+				// 临时存储的对象：直接让nextNode和nowNode交换
+				Node<Item> nextNode;
 				nextNode = nowNode.next;
 				nowNode.item = nextNode.item;
 				nowNode.next = nextNode.next;
 				nextNode = null;
-			}
-			else {
+			} else {
 				nowNode = nowNode.next;
 			}
 		}
