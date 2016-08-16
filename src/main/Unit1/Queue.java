@@ -3,6 +3,11 @@ package Unit1;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * @author Camile
+ * 这是一个链表实现的队列
+ * @param <Item>
+ */
 public class Queue<Item> implements Iterable<Item> {
 	private Node<Item> first; // beginning of queue
 	private Node<Item> last; // end of queue

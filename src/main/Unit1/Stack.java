@@ -5,6 +5,11 @@ import java.util.NoSuchElementException;
 
 import Tools.StdOut;
 
+/**
+ * @author Camile
+ *	这是一个链表实现的栈（堆）
+ * @param <Item>
+ */
 public class Stack<Item> implements Iterable<Item> {
 	private Node<Item> first; // top of stack
 	private int n; // size of the stack

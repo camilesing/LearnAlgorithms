@@ -3,6 +3,11 @@ package Unit1;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * @author Camile
+ *
+ * @param <Item>
+ */
 public class ResizingArrayStack<Item> implements Iterable<Item> {
 	private Item[] a; // array of items
 	private int n; // number of elements on stack

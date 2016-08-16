@@ -3,6 +3,11 @@ package Unit1;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * @author Camile
+ * 这是一个链表实现的背包
+ * @param <Item>
+ */
 public class Bag<Item> implements Iterable<Item> {
 	private Node<Item> first; // beginning of bag
 	private int n; // number of elements in bag
