@@ -5,7 +5,8 @@ import java.util.NoSuchElementException;
 
 /**
  * @author Camile
- * 这是一个链表实现的队列
+ * 环形链表实现Queue
+ * 环形链表也是一条链表，只有没有任何结点的链接为空，且只要链表非空则last.next的值为first
  * @param <Item>
  */
 public class Queue<Item> implements Iterable<Item> {
