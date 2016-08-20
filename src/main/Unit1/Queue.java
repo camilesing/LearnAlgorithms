@@ -127,10 +127,12 @@ public class Queue<Item> implements Iterable<Item> {
 			current = first;
 		}
 
+		//必须被实现的方法1
 		public boolean hasNext() {
 			return current != null;
 		}
 
+		//必须被实现的方法2
 		public void remove() {
 			throw new UnsupportedOperationException();
 		}
