@@ -1,11 +1,8 @@
 package Unit1;
 
+
 /**
  * @author Camile
- */
-/**
- * @author Administrator
- *
  */
 public class Q1_3_30 {
 	private static class Node<Item> {
