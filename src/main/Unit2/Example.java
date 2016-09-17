@@ -13,14 +13,15 @@ public class Example {
 
 	/**
 	 * 排序主体
+	 * 
 	 * @param a
 	 */
 	public static void sort(Comparable[] a) {
 	}
 
-	
 	/**
 	 * 对元素进行比较
+	 * 
 	 * @param v
 	 * @param w
 	 * @return
@@ -31,6 +32,7 @@ public class Example {
 
 	/**
 	 * 将元素交换位置
+	 * 
 	 * @param a
 	 * @param i
 	 * @param j
@@ -42,11 +44,12 @@ public class Example {
 	}
 
 	/**
-	 *  在单行中打印数组
+	 * 在单行中打印数组
+	 * 
 	 * @param a
 	 */
 	private static void show(Comparable[] a) {
-		
+
 		for (int i = 0; i < a.length; i++) {
 			StdOut.print(a[i] + "");
 		}
@@ -61,11 +64,12 @@ public class Example {
 		}
 		return false;
 	}
-	public static void main(String[]args){
-		//从标准输入读取字符串，将它们排序并输出
-		String[]a=In.readStrings();
+
+	public static void main(String[] args) {
+		// 从标准输入读取字符串，将它们排序并输出
+		String[] a = In.readStrings();
 		sort(a);
-		//判断数组是否有序
+		// 判断数组是否有序
 		assert isSorted(a);
 		show(a);
 	}

@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * @author
+ * @author 双链表
  *
  * @param <Item>
  */

@@ -1,6 +1,12 @@
 package Unit1;
 
 
+/**
+ * 双链表的节点
+ * @author Camile
+ *
+ * @param <Item>
+ */
 public class BidirectionalNode<Item> {
 
 	private BidirectionalNode<Item> previous;
