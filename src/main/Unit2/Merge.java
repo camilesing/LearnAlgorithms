@@ -2,6 +2,9 @@ package Unit2;
 
 import Tools.*;
 
+/**
+ * 自顶向下的归并排序
+ */
 public class Merge {
 
 	// This class should not be instantiated.
