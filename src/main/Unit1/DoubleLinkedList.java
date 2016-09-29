@@ -221,8 +221,6 @@ public class DoubleLinkedList<Item> implements Iterable<Item> {
 		n--;
 	}
 
-
-
 	public boolean isEmpty() {
 		return first == null;
 	}

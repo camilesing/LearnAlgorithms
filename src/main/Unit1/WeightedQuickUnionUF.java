@@ -46,7 +46,7 @@ public class WeightedQuickUnionUF {
 	 *             unless {@code 0 <= p < n}
 	 */
 	public int find(int p) {
-		//跟随链接找到根节点
+		// 跟随链接找到根节点
 		validate(p);
 		while (p != parent[p])
 			p = parent[p];

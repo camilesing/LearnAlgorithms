@@ -1,8 +1,8 @@
 package Unit1;
 
-
 /**
  * 双链表的节点
+ * 
  * @author Camile
  *
  * @param <Item>
@@ -12,7 +12,7 @@ public class BidirectionalNode<Item> {
 	private BidirectionalNode<Item> previous;
 	private Item item;
 	private BidirectionalNode<Item> next;
-	
+
 	public BidirectionalNode() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -53,5 +53,5 @@ public class BidirectionalNode<Item> {
 	public String toString() {
 		return "BidirectionalNode [previous=" + previous + ", item=" + item + ", next=" + next + "]";
 	}
-	
+
 }

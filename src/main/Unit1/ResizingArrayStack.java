@@ -4,8 +4,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * @author Camile
- * 下压栈，能够动态调整数组大小的实现
+ * @author Camile 下压栈，能够动态调整数组大小的实现
  * @param <Item>
  */
 public class ResizingArrayStack<Item> implements Iterable<Item> {

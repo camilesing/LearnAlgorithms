@@ -33,7 +33,7 @@ public class QuickUnionUF {
 	 *             unless {@code 0 <= p < n}
 	 */
 	public int find(int p) {
-		//找出分量名称
+		// 找出分量名称
 		validate(p);
 		while (p != parent[p])
 			p = parent[p];
@@ -76,7 +76,7 @@ public class QuickUnionUF {
 	 *             unless both {@code 0 <= p < n} and {@code 0 <= q < n}
 	 */
 	public void union(int p, int q) {
-		//将p和q的根节点统一
+		// 将p和q的根节点统一
 		int rootP = find(p);
 		int rootQ = find(q);
 		if (rootP == rootQ)

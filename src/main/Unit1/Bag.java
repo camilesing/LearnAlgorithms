@@ -4,8 +4,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * @author Camile
- * 这是一个链表实现的背包
+ * @author Camile 这是一个链表实现的背包
  * @param <Item>
  */
 public class Bag<Item> implements Iterable<Item> {

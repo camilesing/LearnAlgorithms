@@ -9,7 +9,7 @@ public class QuickSortTest {
 	@org.junit.Test
 	public void Test() {
 
-		String[] a = {"Q","U","I","C","K","S","O","R","T","E","X","A","M","P","L","E"};
+		String[] a = { "Q", "U", "I", "C", "K", "S", "O", "R", "T", "E", "X", "A", "M", "P", "L", "E" };
 		QuickSort quickSort = new QuickSort();
 		quickSort.sort(a);
 		quickSort.show(a);

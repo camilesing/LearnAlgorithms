@@ -4,9 +4,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * @author Camile
- * 环形链表实现Queue
- * 环形链表也是一条链表，只有没有任何结点的链接为空，且只要链表非空则last.next的值为first
+ * @author Camile 环形链表实现Queue 环形链表也是一条链表，只有没有任何结点的链接为空，且只要链表非空则last.next的值为first
  * @param <Item>
  */
 public class Queue<Item> implements Iterable<Item> {
@@ -127,12 +125,12 @@ public class Queue<Item> implements Iterable<Item> {
 			current = first;
 		}
 
-		//必须被实现的方法1
+		// 必须被实现的方法1
 		public boolean hasNext() {
 			return current != null;
 		}
 
-		//必须被实现的方法2
+		// 必须被实现的方法2
 		public void remove() {
 			throw new UnsupportedOperationException();
 		}

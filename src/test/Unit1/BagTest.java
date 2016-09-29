@@ -23,7 +23,7 @@ public class BagTest {
 		// System.out.println(s);
 		// }
 		Bag<String> bag = new Bag<String>();
-	
+
 		while (!StdIn.isEmpty()) {
 			String item = StdIn.readString();
 			bag.add(item);

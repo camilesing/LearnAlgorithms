@@ -6,8 +6,7 @@ import java.util.NoSuchElementException;
 import Tools.StdOut;
 
 /**
- * @author Camile
- *	这是一个链表实现的栈（堆）
+ * @author Camile 这是一个链表实现的栈（堆）
  * @param <Item>
  */
 public class Stack<Item> implements Iterable<Item> {
