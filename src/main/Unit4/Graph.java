@@ -19,6 +19,10 @@ public class Graph {
      * 边数
      */
     private int E;		
+    
+    /**
+     *  邻接表的下一个
+     */
     private Bag<Integer>[] adj;
     
     /**
@@ -124,7 +128,7 @@ public class Graph {
 
 
     /**
-     * 向v相邻的所有顶点
+     * 返回边数
      * Returns the vertices adjacent to vertex {@code v}.
      *
      * @param  v the vertex

@@ -32,3 +32,27 @@
 |邻接矩阵|V^2|1|1|V|
 |邻接表|E+V|1|degree(v)|degree(v)|
 |邻接表|E+V|logV|logV|logV+degree(v)|
+
+##图处理算法的API
+**public class Search**
+|返回类型|方法名|简介|
+|:--|:--|:--|
+||Search(Graph g,int s)|找到和起点s连通的所有点|
+|boolean|marked(int v)|v和s是连通的吗|
+|int |count()|与s连通的顶点总数|
+
+###深度优先算法
+主要思想：
+- 用一个递归的方法来遍历所有顶点
+- 将它标记为已访问
+- 递归地访问它的所有没有被标记的邻居顶点
+
+>深度优先搜索标记与起点连通的所欲哦顶点所需的时间和顶点的读书之和成正比。
+
+## 寻找路径
+**public class Search**
+|返回类型|方法名|简介|
+|:--|:--|:--|
+||Paths(Graph g,int s)|从G中找出所有起点为s的路径|
+|boolean|hasPathTo(int v)|是否存在从s到v的路径|
+|Iterable<Integer>|pathTo()|s到v的路径，如果不存在则返回null|
