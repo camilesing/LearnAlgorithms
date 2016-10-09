@@ -2,11 +2,12 @@ package Unit4;
 
 import org.junit.Test;
 import Tools.*;
+import Unit4.DepthFirstPaths;
 
-public class DepthFirstPaths {
+public class DepthFirstPathsTest {
 
 	@Test
-	public void Test((String[] args){
+	public void Test1(String[] args){
         In in = new In(args[0]);
         Graph G = new Graph(in);
         int s = Integer.parseInt(args[1]);
