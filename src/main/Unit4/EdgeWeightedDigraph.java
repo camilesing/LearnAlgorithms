@@ -11,8 +11,17 @@ import Unit1.Stack;
 public class EdgeWeightedDigraph {
     private static final String NEWLINE = System.getProperty("line.separator");
 
+    /**
+     * 顶点总数
+     */
     private final int V;                // number of vertices in this digraph
+    /**
+     * 边的总数
+     */
     private int E;                      // number of edges in this digraph
+    /**
+     * 邻接表
+     */
     private Bag<DirectedEdge>[] adj;    // adj[v] = adjacency list for vertex v
     private int[] indegree;             // indegree[v] = indegree of vertex v
     
@@ -215,15 +224,6 @@ public class EdgeWeightedDigraph {
         return s.toString();
     }
 
-    /**
-     * Unit tests the {@code EdgeWeightedDigraph} data type.
-     *
-     * @param args the command-line arguments
-     */
-    public static void main(String[] args) {
-        In in = new In(args[0]);
-        EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
-        StdOut.println(G);
-    }
+
 
 }

@@ -3,12 +3,21 @@ package Unit4;
 import Tools.*;
 
 /**
- * 有向表
+ * 加权有向边
  *
  */
 public class DirectedEdge { 
+    /**
+     * 边的起点
+     */
     private final int v;
+    /**
+     * 边的终点
+     */
     private final int w;
+    /**
+     * 边的权重
+     */
     private final double weight;
 
     /**
@@ -62,14 +71,6 @@ public class DirectedEdge {
         return v + "->" + w + " " + String.format("%5.2f", weight);
     }
 
-    /**
-     * Unit tests the {@code DirectedEdge} data type.
-     *
-     * @param args the command-line arguments
-     */
-    public static void main(String[] args) {
-        DirectedEdge e = new DirectedEdge(12, 34, 5.67);
-        StdOut.println(e);
-    }
+
 }
 

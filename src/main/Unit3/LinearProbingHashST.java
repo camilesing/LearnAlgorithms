@@ -2,6 +2,12 @@ package Unit3;
 
 import Unit1.Queue;
 
+/**
+ * 基于线性探测法的散列表
+ *
+ * @param <Key>
+ * @param <Value>
+ */
 public class LinearProbingHashST<Key, Value> {
     private static final int INIT_CAPACITY = 4;
 
